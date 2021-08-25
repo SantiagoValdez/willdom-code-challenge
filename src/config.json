@@ -1,0 +1,23 @@
+{
+	"development": {
+		"username": "taxio",
+		"password": "taxio",
+		"database": "code_challenge",
+		"host": "localhost",
+		"port": "5432",
+		"dialect": "postgres"
+	},
+	"test": {
+		"database": "test",
+		"dialect": "sqlite",
+		"storage": ":memory:"
+	},
+	"production": {
+		"username": "root",
+		"password": null,
+		"database": "database_production",
+		"port": "5432",
+		"host": "127.0.0.1",
+		"dialect": "postgres"
+	}
+}
