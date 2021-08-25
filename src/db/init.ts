@@ -13,7 +13,12 @@ export const initDB = (): Sequelize => {
 			protocol: "postgres",
 			logging: false,
 			...options,
-			ssl: true,
+			dialectOptions: {
+				ssl: {
+					require: true,
+					rejectUnauthorized: false
+				}
+			},
 			modelPaths: [__dirname + "/models"]
 		})
 	}
