@@ -7,7 +7,7 @@ const config = (<any>configFile)[env];
 
 export const initDB = (): Sequelize => {
 	if (env === "production") {
-		const options = parseDatabaseUrl(config.databaseUrl);
+		const options = parseDatabaseUrl(process.env.DATABASE_URL);
 		return new Sequelize({
 			dialect: "postgres",
 			protocol: "postgres",
