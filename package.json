@@ -7,7 +7,7 @@
     "test:coverage": "jest --coverage",
     "start": "ts-node-dev --respawn ./src/index.ts",
     "tsc": "tsc",
-    "build": "rm -R ./dist && tsc --project ./",
+    "build": "rm -Rf ./dist && tsc --project ./",
     "lint": "eslint src/*",
     "lint:fix": "eslint src/* --fix",
     "lint:quiet": "eslint src/* --quiet"
