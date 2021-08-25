@@ -13,11 +13,13 @@
 		"storage": ":memory:"
 	},
 	"production": {
-		"username": "armvjlmycliqwn",
-		"password": "e748a5f85b396bd0d7bbac0b79ed9f86fce71287314e48304fdaf604dfa00742",
-		"database": "d53o3recivg8al",
-		"port": "5432",
-		"host": "ec2-23-21-4-7.compute-1.amazonaws.com",
-		"dialect": "postgres"
+		"use_env_variable": "DATABASE_URL",
+		"dialect": "postgres",
+		"dialectOptions": {
+			"ssl": {
+				"require": true,
+				"rejectUnauthorized": false
+			}
+		}
 	}
 }
