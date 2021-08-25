@@ -3,7 +3,7 @@
 ## Getting started
 
 To run this project on your machine please install the dependencies `npm install`, then add a proper database connection configuration on `src/config.json`.
-Execute `npm start` to start a dev server.
+Execute `npm run dev` to start a dev server.
 
 If you want to compile for deployment, run `npm run build`.
 
