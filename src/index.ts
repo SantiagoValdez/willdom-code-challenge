@@ -1,4 +1,4 @@
-import express, { Application, Request, Response } from 'express';
+import express, { Application } from 'express';
 import routes from './api/routes';
 import { errorHandler } from './api/middleware';
 import { initDB } from './db/init';
