@@ -16,10 +16,6 @@ export const getAllOrders = async (): Promise<Order[] | null> => {
 
 export const getOrderById = async (id: number): Promise<Order | null> => {
 	const order = await Order.findByPk(id, { include: [{ model: OrderItem, include: [{ model: Pizza, as: 'pizza' }], as: 'orderItems', attributes: ['id', 'quantity'] }] });
-	if (order == null) {
-		throw new Error('Order not found');
-	}
-
 	return order;
 }
 
